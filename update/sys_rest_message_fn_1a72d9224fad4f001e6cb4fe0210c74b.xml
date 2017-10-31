@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "searchInputMetaData": {&#13;
+        "consumerAppId": "UMR",&#13;
+        "consumerAppType": "IA",&#13;
+        "consumerInstanceId": "",&#13;
+        "rXClaimInstanceId": "BOOK1",&#13;
+        "externalCorrelationId": "Test_11_MCSE_07112017",&#13;
+        "internalCorrelationId": "Test_11_MCSI_07112017",&#13;
+        "consumerType": "MA",&#13;
+        "rXSystemValuePair": {&#13;
+            "PBMUserId": "test@gmail.com",&#13;
+            "PBMUserId1": "test@gmail.com"&#13;
+        }&#13;
+    },&#13;
+    "memberId": "TESTMEM22333322333",&#13;
+    "carrierId": "PROACT1",&#13;
+    "accountId": "ABB",&#13;
+    "groupId": "8285A01",&#13;
+    "memberKey": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZW1iZXJTZWFyY2hLZXkiLCJNZW1iZXJJRCI6IlRFU1RNRU0yMjMzMzMyMjMzMyIsIkNhcnJpZXJJRCI6IlBST0FDVDEgICIsIkFjY291bnRJRCI6IkFCQiAgICAgICAgICAgICIsIkdyb3VwSWQiOiI4Mjg1QTAxICAgICAgICAiLCJSeENsYWltSW5zdGFuY2VJZCI6IiIsIkNvbnN1bWVBcHBJZCI6IlByb0FjdCIsIkdyb3VwTGlzdCI6IlBST0FDVCIsIlRpbWVzdGFtcCI6MTQ5OTc1NjIwOTM1OX0.8sqfJlU6idZkvdbmCNEngS5-MOrsDueg8unKpXGr-Pk",&#13;
+&#13;
+    "fillDateFrom": "20170601",&#13;
+    "fillDateThru": "20171030"&#13;
+&#13;
+}&#13;
+</content>
+        <function_name>Claim Search POST</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>OptumRxClaimSearch [ Claim Search POST ]</qualified_name>
+        <rest_endpoint>https://api5-stg.optum.com:8443/api/optumrx/claims/v1/qa</rest_endpoint>
+        <rest_message display_value="OptumRxClaimSearch">6f4259624fad4f001e6cb4fe0210c787</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>todd.fudala</sys_created_by>
+        <sys_created_on>2017-10-04 16:13:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1a72d9224fad4f001e6cb4fe0210c74b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Claim Search POST</sys_name>
+        <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
+        <sys_update_name>sys_rest_message_fn_1a72d9224fad4f001e6cb4fe0210c74b</sys_update_name>
+        <sys_updated_by>todd.fudala</sys_updated_by>
+        <sys_updated_on>2017-10-10 03:57:02</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

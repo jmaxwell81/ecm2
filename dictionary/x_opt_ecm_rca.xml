@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Root Cause Analysis" max_length="40" name="x_opt_ecm_rca" type="collection">
+        <element label="Case" mandatory="true" max_length="32" name="case" read_only="true" reference="x_opt_ecm_case" type="reference"/>
+        <element choice="1" label="Level 1" mandatory="true" max_length="40" name="level_1" type="choice">
+            <choice>
+                <element label="1 of 2" sequence="0" value="1 of 2"/>
+                <element label="1 of 3" sequence="1" value="1 of 3"/>
+                <element label="1 of 4" sequence="2" value="1 of 4"/>
+            </choice>
+        </element>
+        <element choice="1" dependent="level_1" dependent_on_field="level_1" label="Level 2" max_length="40" name="level_2" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="1 of 2" label="2 of 2, A" sequence="0" value="2 of 2, A"/>
+                <element dependent_value="1 of 4" label="2 of 4, A" sequence="0" value="2 of 4, A"/>
+                <element dependent_value="1 of 2" label="2 of 2, B" sequence="1" value="2 of 2, B"/>
+                <element dependent_value="1 of 4" label="2 of 4, B" sequence="1" value="2 of 4, B"/>
+                <element dependent_value="1 of 3" label="2 of 3, A" sequence="2" value="2 of 3, A"/>
+                <element dependent_value="1 of 3" label="2 of 3, B" sequence="3" value="2 of 3, B"/>
+                <element dependent_value="1 of 3" label="2 of 3, C ( no children )" sequence="4" value="2 of 3, C"/>
+            </choice>
+        </element>
+        <element choice="1" dependent="level_2" dependent_on_field="level_2" label="Level 3" max_length="40" name="level_3" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="2 of 3, A" label="3 of 3, A1" sequence="0" value="3 of 3, A1"/>
+                <element dependent_value="2 of 3, A" label="3 of 3, A2" sequence="1" value="3 of 3, A2"/>
+                <element dependent_value="2 of 3, B" label="3 of 3, B1" sequence="2" value="3 of 3, B1"/>
+                <element dependent_value="2 of 4, A" label="3 of 4, A1" sequence="4" value="3 of 4, A1"/>
+                <element dependent_value="2 of 4, B" label="3 of 4, B1" sequence="4" value="3 of 4, B1"/>
+            </choice>
+        </element>
+        <element choice="1" dependent="level_3" dependent_on_field="level_3" label="Level 4" max_length="40" name="level_4" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="3 of 4, A1" label="4 of 4, A1a" sequence="4" value="4 of 4, A1a"/>
+            </choice>
+        </element>
+        <element label="Other Reason" max_length="80" name="other_reason" type="string"/>
+        <index name="index">
+            <element name="case"/>
+        </index>
+    </element>
+</database>

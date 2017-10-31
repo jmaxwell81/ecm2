@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_opt_ecm.QualityReviewUtils</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QualityReviewUtils</name>
+        <script><![CDATA[var QualityReviewUtils = Class.create();
+QualityReviewUtils.prototype = {
+	
+	initialize: function() { },
+	
+	getAdvocateRefQual : function() {
+		
+		var advocateRole = new GlideRecord('sys_user_role');
+		var foundRole = advocateRole.get('name', 'x_opt_ecm.advocate');
+		if (!foundRole) {
+			return '';
+		}
+		
+		var advocates = new GlideRecord('sys_user_has_role');
+		advocates.addQuery('role', advocateRole.getUniqueValue());
+		advocates.query();
+		
+		var advocateSysIds = [];
+		while (advocates.next()) {
+			advocateSysIds.push(advocates.getValue('user'));
+		}
+		
+		return 'sys_idIN' + advocateSysIds.join(',');
+	},
+	
+	type: 'QualityReviewUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>john.daniel</sys_created_by>
+        <sys_created_on>2017-10-27 14:33:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>54f45f794f0a8b801e6cb4fe0210c728</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>QualityReviewUtils</sys_name>
+        <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
+        <sys_update_name>sys_script_include_54f45f794f0a8b801e6cb4fe0210c728</sys_update_name>
+        <sys_updated_by>john.daniel</sys_updated_by>
+        <sys_updated_on>2017-10-27 14:46:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

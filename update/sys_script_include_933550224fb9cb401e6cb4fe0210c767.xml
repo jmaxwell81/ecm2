@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_opt_ecm.OptumRxAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>OptumRxAjax</name>
+        <script><![CDATA[gs.include("OptumRxIntegration");
+gs.include("IntegrationLogUtil");
+
+var orxint = new OptumRxIntegration();
+var logger = new IntegrationLogUtil();
+var OptumRxAjax = Class.create();
+OptumRxAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    memberSearch: function() {
+        //return "calling memberSearch";
+
+        var inputs = {};
+        inputs.firstName = this.getParameter('sysparm_first_name');
+        inputs.lastName = this.getParameter('sysparm_last_name');
+        inputs.dateOfBirth = this.getParameter('sysparm_dob');
+        inputs.memberNumber = this.getParameter('sysparm_member_id');
+        inputs.effectiveDate = this.getParameter('sysparm_eff_date');
+        inputs.city = this.getParameter('sysparm_city');
+        inputs.state = this.getParameter('sysparm_state');
+
+        var orxResponse = orxint.optumRxMemberSearch(inputs)
+        return orxint.getRows(orxResponse);
+    },
+
+    claimSearch: function() {
+        return "calling claimSearch";
+    },
+
+    getOAuthToken: function() {
+        return orxint.getOptumRxToken();
+    },
+
+
+
+    type: 'OptumRxAjax'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>todd.fudala</sys_created_by>
+        <sys_created_on>2017-10-16 22:11:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>933550224fb9cb401e6cb4fe0210c767</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>OptumRxAjax</sys_name>
+        <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
+        <sys_update_name>sys_script_include_933550224fb9cb401e6cb4fe0210c767</sys_update_name>
+        <sys_updated_by>todd.fudala</sys_updated_by>
+        <sys_updated_on>2017-10-30 22:18:49</sys_updated_on>
+    </sys_script_include>
+</record_update>
