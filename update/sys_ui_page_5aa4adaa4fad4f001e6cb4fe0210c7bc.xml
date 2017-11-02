@@ -15,18 +15,18 @@
         "state": ""
     };
     // TEST DATA
-    inputs.firstName = "WALTER";
-    inputs.lastName = "TEST";
-    inputs.dateOfBirth = "19090713";
-    inputs.memberNumber = "123456789";
-    inputs.effectiveDate = "20110519";
-    inputs.city = "OKLAHOMA city";
-    inputs.state = "OK";
+    /*    inputs.firstName = "WALTER";
+        inputs.lastName = "TEST";
+        inputs.dateOfBirth = "19090713";
+        inputs.memberNumber = "123456789";
+        inputs.effectiveDate = "20110519";
+        inputs.city = "OKLAHOMA city";
+        inputs.state = "OK";*/
 
-    /*    for (var i in inputs) {
-            inputs[i] = document.getElementById(i).value;
-            console.log(inputs[i]);
-        }*/
+    for (var i in inputs) {
+        inputs[i] = document.getElementById(i).value;
+        console.log(inputs[i]);
+    }
 
     this.loading(true);
     this.memberSearch(inputs);
@@ -56,43 +56,64 @@ function memberSearch(input_values) {
 
 function Parse(response) {
     var answer = response.responseXML.documentElement.getAttribute("answer");
-    alert(answer);
-    bindTable(answer);
+    var data_obj = JSON.parse(answer);
+    //alert(answer);
+    bindTable(data_obj);
     loading(false);
 }
 
 
 
-function bindTable(answer_data) {
+function bindTable(data_object) {
 
-    var bindData = [JSON.parse(answer_data)];
-    var table = $j("#member_results").DataTable(
+    var bindData = data_object.response.memberSearchItems;
+    var table = $j("#member_results").DataTable({
+        "retrieve": true,
+        "searching": false,
+        "paging": false,
+        //"scrollY": "200px",
+        //"scrollCollapse": true,
+        columns: [{
+            title: "First Name",
+            data: "firstName"
+        }, {
+            title: "Last Name",
+            data: "lastName"
+        }, {
+            title: "DOB",
+            data: "dateOfBirth"
+        }, {
+            title: "Eff Date From",
+            data: "memberEffectiveDate.fromDate"
+        }, {
+            title: "Eff Date Thru",
+            data: "memberEffectiveDate.thruDate"
+        }, {
+            title: "Carrier ID",
+            data: "carrierId"
+        }, {
+            title: "Account ID",
+            data: "accountId"
+        }, {
+            title: "Group ID",
+            data: "groupId"
+        }, {
+            title: "Member ID",
+            data: "memberId"
+        }, {
+            title: "Telephone",
+            data: "phone"
+        }]
 
-        {
-            retrieve: true,
-            searching: false,
-            paging: false,
-            data: bindData,
-            columns: [{
-                    title: "First Name",
-                    data: "firstName"
-                },
-                {
-                    title: "Last Name",
-                    data: "lastName"
-                },
-                {
-                    title: "DOB",
-                    data: "dateOfBirth"
-                },
-                {
-                    title: "Effective Date",
-                    data: "effectiveDate"
-                }
-            ]
-        }
-    );
+    });
+    //table.clear().draw();
+    table.clear().draw().rows.add(bindData).draw();
+
 }
+
+
+
+
 
 function loading(is_loading) {
     var loader = document.getElementById("loading");
@@ -108,6 +129,10 @@ function loading(is_loading) {
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 
     <script src="x_opt_ecm.DataTables.jsdbx"></script>
+    <link rel="stylesheet" href="styles/heisenberg/heisenberg_all.css"></link>
+    <link rel="stylesheet" href="styles/heisenberg/source_sans_pro.css"></link>
+    <link rel="stylesheet" type="text/css" href="styles/dev-studio.css"></link>
+    <link rel="stylesheet" type="text/css" href="styles/cn-icons/cn-icons.css"></link>
 
     <div class="popup-body">
         <form name="search" class="form-horizontal">
@@ -181,14 +206,15 @@ function loading(is_loading) {
         <h3>Loading...</h3>
         <div class="loading-indicator icon-loading icon-lg"></div>
     </div>
-
-    <div class="table-container">
-        <table id="member_results" class="table">
-            <thead class="table-col-header">
+    <div class="table-list">
+        <div class="table-container">
+            <table id="member_results" class="table">
+                <thead></thead>
                 <tbody></tbody>
-            </thead>
-        </table>
+            </table>
+        </div>
     </div>
+
 </j:jelly>
 ]]></html>
         <name>orx_search</name>
@@ -198,7 +224,7 @@ function loading(is_loading) {
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>234</sys_mod_count>
+        <sys_mod_count>282</sys_mod_count>
         <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -206,6 +232,6 @@ function loading(is_loading) {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-30 22:24:46</sys_updated_on>
+        <sys_updated_on>2017-11-01 22:24:17</sys_updated_on>
     </sys_ui_page>
 </record_update>

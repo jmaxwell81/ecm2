@@ -5,13 +5,13 @@
             <element>case_number</element>
             <position>0</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>4a2f4d394f028b801e6cb4fe0210c72f</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>d459a3af4f8e8f801e6cb4fe0210c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>case_number.state</element>
             <position>1</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>ca2f4d394f028b801e6cb4fe0210c72f</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5859a3af4f8e8f801e6cb4fe0210c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>case_number.complaint_type</element>
             <position>2</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>4e2f4d394f028b801e6cb4fe0210c72f</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>d859a3af4f8e8f801e6cb4fe0210c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>case_number.responsible_department</element>
             <position>3</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>ce2f4d394f028b801e6cb4fe0210c72f</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5c59a3af4f8e8f801e6cb4fe0210c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>case_number.platform</element>
             <position>4</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>422f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>dc59a3af4f8e8f801e6cb4fe0210c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,13 +75,13 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>c22f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5059a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -89,13 +89,13 @@
             <element>compliance_met</element>
             <position>6</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>462f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>d059a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -103,13 +103,13 @@
             <element>case_number.oca_ocr_received_date_time</element>
             <position>7</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>c62f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5459a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -117,13 +117,13 @@
             <element>case_number.due_date</element>
             <position>8</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>4a2f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>d459a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -131,13 +131,13 @@
             <element>case_number.modified_due_date</element>
             <position>9</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>ca2f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5859a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -145,13 +145,13 @@
             <element>case_number.assigned_to.manager</element>
             <position>10</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>4e2f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>d859a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -159,13 +159,41 @@
             <element>case_number.assigned_to</element>
             <position>11</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:34:38</sys_created_on>
-            <sys_id>ce2f4d394f028b801e6cb4fe0210c730</sys_id>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5c59a3af4f8e8f801e6cb4fe0210c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:34:38</sys_updated_on>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>12</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>dc59a3af4f8e8f801e6cb4fe0210c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>qr_comments</element>
+            <position>13</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-02 02:17:32</sys_created_on>
+            <sys_id>5059a3af4f8e8f801e6cb4fe0210c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Case" display_value="Case" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">9ad236dd4fce0b801e6cb4fe0210c7ef</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:17:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

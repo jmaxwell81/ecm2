@@ -2,170 +2,198 @@
 <record_update>
     <sys_ui_section caption="" section_id="f2e0be1d4fce0b801e6cb4fe0210c7a4" sys_domain="global" table="x_opt_ecm_quality_review" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>process_flow.xml</element>
             <position>0</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>a24cd0ce4fca8b801e6cb4fe0210c7cc</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>95afb3af4fce8f801e6cb4fe0210c73e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Process Flow">d2cd6b634fce8f801e6cb4fe0210c75f</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>1dafb3af4fce8f801e6cb4fe0210c73e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>2</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>9dafb3af4fce8f801e6cb4fe0210c73e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>initial_qp_due_date</element>
-            <position>1</position>
+            <position>3</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>2a4cd0ce4fca8b801e6cb4fe0210c7cc</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>11afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>revised_qa_due_date</element>
-            <position>2</position>
+            <position>4</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>aa4cd0ce4fca8b801e6cb4fe0210c7cc</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>91afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>review_completed_date</element>
-            <position>3</position>
+            <position>5</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>2e4cd0ce4fca8b801e6cb4fe0210c7cc</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>15afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>review_completed_by</element>
-            <position>4</position>
+            <position>6</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>ae4cd0ce4fca8b801e6cb4fe0210c7cc</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>95afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
+            <position>7</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>224cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>19afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_created_on</element>
-            <position>6</position>
+            <element>opened_at</element>
+            <position>8</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>a24cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>99afb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>review_state</element>
-            <position>7</position>
+            <position>9</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>264cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>1dafb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assignment_group</element>
-            <position>8</position>
+            <position>10</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>a64cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>9dafb3af4fce8f801e6cb4fe0210c73f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assigned_to</element>
-            <position>9</position>
+            <position>11</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>2a4cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>11afb3af4fce8f801e6cb4fe0210c740</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>10</position>
+            <position>12</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>aa4cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>91afb3af4fce8f801e6cb4fe0210c740</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>short_description</element>
-            <position>11</position>
+            <position>13</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 19:30:52</sys_created_on>
-            <sys_id>2e4cd0ce4fca8b801e6cb4fe0210c7cd</sys_id>
+            <sys_created_on>2017-11-02 03:55:06</sys_created_on>
+            <sys_id>15afb3af4fce8f801e6cb4fe0210c740</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">f2e0be1d4fce0b801e6cb4fe0210c7a4</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 19:30:52</sys_updated_on>
+            <sys_updated_on>2017-11-02 03:55:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

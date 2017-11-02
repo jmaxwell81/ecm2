@@ -50,12 +50,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>92d2f6dd4fce0b801e6cb4fe0210c746</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_opt_ecm_quality_review" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ad236dd4fce0b801e6cb4fe0210c7f2</sys_ui_form>
             <sys_ui_section caption="Documentation" display_value="Documentation" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">1ad236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-26 14:44:30</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:12:52</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>4</position>
@@ -64,12 +64,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>16d2f6dd4fce0b801e6cb4fe0210c74a</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_opt_ecm_quality_review" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ad236dd4fce0b801e6cb4fe0210c7f2</sys_ui_form>
             <sys_ui_section caption="Timely Submission" display_value="Timely Submission" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">ded236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-26 14:44:30</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:12:52</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>5</position>
@@ -78,12 +78,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>2ed2f6dd4fce0b801e6cb4fe0210c74e</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_opt_ecm_quality_review" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ad236dd4fce0b801e6cb4fe0210c7f2</sys_ui_form>
             <sys_ui_section caption="Correspondence" display_value="Correspondence" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">96d236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-26 14:44:30</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:12:52</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>6</position>
@@ -92,12 +92,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>aad2f6dd4fce0b801e6cb4fe0210c753</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_opt_ecm_quality_review" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ad236dd4fce0b801e6cb4fe0210c7f2</sys_ui_form>
             <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-26 14:44:30</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:12:52</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>7</position>
@@ -106,12 +106,12 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>153b56694f4a4b801e6cb4fe0210c7c8</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_opt_ecm_quality_review" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ad236dd4fce0b801e6cb4fe0210c7f2</sys_ui_form>
-            <sys_ui_section caption="Notes" display_value="Notes" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">c13b92694f4a4b801e6cb4fe0210c79b</sys_ui_section>
+            <sys_ui_section caption="Activity Log" display_value="Activity Log" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">c13b92694f4a4b801e6cb4fe0210c79b</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-26 15:28:25</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:12:52</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_opt_ecm_quality_review</name>

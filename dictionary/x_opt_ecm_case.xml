@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="261" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="262" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -27,9 +27,11 @@
         <element choice="1" label="Complaint Type" max_length="32" name="complaint_type" reference="x_opt_ecm_complaint_type" type="reference">
             <choice/>
         </element>
+        <element label="Contact Account ID" max_length="40" name="contact_account_id" type="string"/>
         <element label="Contact Address 1" max_length="40" name="contact_address_1" type="string"/>
         <element label="Contact Address 2" max_length="40" name="contact_address_2" type="string"/>
         <element label="Contact Alternate ID" max_length="40" name="contact_alternate_id" type="string"/>
+        <element label="Contact Carrier ID" max_length="40" name="contact_carrier_id" type="string"/>
         <element label="Contact City" max_length="40" name="contact_city" type="string"/>
         <element default="dd38b7111b121100763d91eebc0713f5" label="Contact Country" max_length="32" name="contact_country" reference="core_country" type="reference"/>
         <element label="Contact DOB" max_length="40" name="contact_dob" type="glide_date"/>
@@ -149,9 +151,11 @@
             </choice>
         </element>
         <element label="State of Situs" max_length="32" name="market_state_of_situs" reference="x_opt_im_state_location" type="reference"/>
+        <element label="Member Account ID" max_length="40" name="member_account_id" type="string"/>
         <element label="Member Address 1" max_length="40" name="member_address_1" type="string"/>
         <element label="Member Address 2" max_length="40" name="member_address_2" type="string"/>
         <element label="Member Alt ID" max_length="40" name="member_alt_id" type="string"/>
+        <element label="Member Carrier ID" max_length="40" name="member_carrier_id" type="string"/>
         <element label="Member City" max_length="40" name="member_city" type="string"/>
         <element default="dd38b7111b121100763d91eebc0713f5" label="Member Country" max_length="40" name="member_country" reference="core_country" type="reference"/>
         <element label="Member DOB" max_length="40" name="member_dob" type="glide_date"/>

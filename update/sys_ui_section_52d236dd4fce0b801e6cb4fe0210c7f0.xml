@@ -5,13 +5,13 @@
             <element>determination</element>
             <position>0</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:27</sys_created_on>
-            <sys_id>8ddc81f54f028b801e6cb4fe0210c7a4</sys_id>
+            <sys_created_on>2017-11-01 14:22:12</sys_created_on>
+            <sys_id>7d95cd234f0a8f801e6cb4fe0210c7e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Determination" display_value="Determination" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">52d236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:27</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:22:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>determination_root_cause</element>
             <position>1</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:27</sys_created_on>
-            <sys_id>01dc81f54f028b801e6cb4fe0210c7a5</sys_id>
+            <sys_created_on>2017-11-01 14:22:12</sys_created_on>
+            <sys_id>fd95cd234f0a8f801e6cb4fe0210c7e9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Determination" display_value="Determination" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">52d236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:27</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:22:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,15 +33,43 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:27</sys_created_on>
-            <sys_id>81dc81f54f028b801e6cb4fe0210c7a5</sys_id>
+            <sys_created_on>2017-11-01 14:22:12</sys_created_on>
+            <sys_id>7195cd234f0a8f801e6cb4fe0210c7ea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Determination" display_value="Determination" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">52d236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:27</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:22:12</sys_updated_on>
             <sys_user/>
             <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-01 14:22:12</sys_created_on>
+            <sys_id>f195cd234f0a8f801e6cb4fe0210c7ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Determination" display_value="Determination" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">52d236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-01 14:22:12</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>determination_comments</element>
+            <position>4</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-01 14:22:12</sys_created_on>
+            <sys_id>7595cd234f0a8f801e6cb4fe0210c7ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Determination" display_value="Determination" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">52d236dd4fce0b801e6cb4fe0210c7f0</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-01 14:22:12</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Determination</caption>

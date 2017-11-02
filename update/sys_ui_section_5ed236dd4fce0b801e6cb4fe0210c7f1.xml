@@ -5,13 +5,13 @@
             <element>database</element>
             <position>0</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:28</sys_created_on>
-            <sys_id>8ddc81f54f028b801e6cb4fe0210c7c0</sys_id>
+            <sys_created_on>2017-11-01 14:10:16</sys_created_on>
+            <sys_id>83d2cdef4fc68f801e6cb4fe0210c7e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:28</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:10:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>database_root_cause</element>
             <position>1</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:28</sys_created_on>
-            <sys_id>01dc81f54f028b801e6cb4fe0210c7c1</sys_id>
+            <sys_created_on>2017-11-01 14:10:16</sys_created_on>
+            <sys_id>07d2cdef4fc68f801e6cb4fe0210c7e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:28</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:10:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,15 +33,43 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>craig.leonard</sys_created_by>
-            <sys_created_on>2017-10-27 04:24:28</sys_created_on>
-            <sys_id>81dc81f54f028b801e6cb4fe0210c7c1</sys_id>
+            <sys_created_on>2017-11-01 14:10:16</sys_created_on>
+            <sys_id>87d2cdef4fc68f801e6cb4fe0210c7e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
             <sys_updated_by>craig.leonard</sys_updated_by>
-            <sys_updated_on>2017-10-27 04:24:28</sys_updated_on>
+            <sys_updated_on>2017-11-01 14:10:16</sys_updated_on>
             <sys_user/>
             <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-01 14:10:16</sys_created_on>
+            <sys_id>0bd2cdef4fc68f801e6cb4fe0210c7e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-01 14:10:16</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>database_comments</element>
+            <position>4</position>
+            <sys_created_by>craig.leonard</sys_created_by>
+            <sys_created_on>2017-11-01 14:10:16</sys_created_on>
+            <sys_id>8bd2cdef4fc68f801e6cb4fe0210c7e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Database" display_value="Database" name="x_opt_ecm_quality_review" sys_domain="global" view="Default view">5ed236dd4fce0b801e6cb4fe0210c7f1</sys_ui_section>
+            <sys_updated_by>craig.leonard</sys_updated_by>
+            <sys_updated_on>2017-11-01 14:10:16</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Database</caption>

@@ -15,9 +15,17 @@ var logger = new IntegrationLogUtil();
 var OptumRxAjax = Class.create();
 OptumRxAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
+    LOGSOURCE: "OptumRxIntegration.", // Log Source
+    LOGHEADER: "{0}{1} >[{2}]:\r\n{3}", // Standard prefix
+    LOG_INFO: "INFO",
+    LOG_ERROR: "ERROR",
+    LOG_DEBUG: "DEBUG",
+    //EXAMPLE: "gs.error(this.LOGHEADER , this.LOGSOURCE , functName, this.LOG_ERROR, message);"
+
+
     memberSearch: function() {
         //return "calling memberSearch";
-
+        var functName = "memberSearch()";
         var inputs = {};
         inputs.firstName = this.getParameter('sysparm_first_name');
         inputs.lastName = this.getParameter('sysparm_last_name');
@@ -27,8 +35,10 @@ OptumRxAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         inputs.city = this.getParameter('sysparm_city');
         inputs.state = this.getParameter('sysparm_state');
 
-        var orxResponse = orxint.optumRxMemberSearch(inputs)
-        return orxint.getRows(orxResponse);
+        var orxResponse = orxint.optumRxMemberSearch(inputs);
+        //return orxint.getRows(orxResponse);
+        gs.info(this.LOGHEADER, this.LOGSOURCE, functName, this.LOG_INFO, orxResponse);
+        return orxResponse;
     },
 
     claimSearch: function() {
@@ -49,7 +59,7 @@ OptumRxAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_on>2017-10-16 22:11:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>933550224fb9cb401e6cb4fe0210c767</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>OptumRxAjax</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy>read</sys_policy>
@@ -57,6 +67,6 @@ OptumRxAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_include_933550224fb9cb401e6cb4fe0210c767</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-30 22:18:49</sys_updated_on>
+        <sys_updated_on>2017-11-01 17:25:28</sys_updated_on>
     </sys_script_include>
 </record_update>

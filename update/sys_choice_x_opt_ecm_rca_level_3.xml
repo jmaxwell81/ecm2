@@ -2,99 +2,403 @@
 <record_update>
     <sys_choice action="INSERT_OR_UPDATE" field="level_3" table="x_opt_ecm_rca" version="3">
         <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value>2 of 3, A</dependent_value>
+            <dependent_value>appeal_processing_communication</dependent_value>
             <element>level_3</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 of 3, A1</label>
+            <label>Language Barrier</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>0</sequence>
             <sys_created_by>john.daniel</sys_created_by>
-            <sys_created_on>2017-10-24 21:10:23</sys_created_on>
+            <sys_created_on>2017-11-02 03:08:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>8b46d1494f420b801e6cb4fe0210c71b</sys_id>
-            <sys_mod_count>5</sys_mod_count>
+            <sys_id>2405fb674fce8f801e6cb4fe0210c706</sys_id>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-26 17:26:08</sys_updated_on>
-            <value>3 of 3, A1</value>
+            <sys_updated_on>2017-11-02 03:08:37</sys_updated_on>
+            <value>appeal_processing_communication_language_barrier</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value>2 of 3, A</dependent_value>
+            <dependent_value>appeal_processing_misroute</dependent_value>
             <element>level_3</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 of 3, A2</label>
+            <label>Misroute</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 06:09:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>07d497134f068f801e6cb4fe0210c72c</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:40:54</sys_updated_on>
+            <value>appeal_processing_misroute_misroute</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_individual</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Automatic withdawals</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 20:49:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>222e562f4fca8f801e6cb4fe0210c79f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:46:25</sys_updated_on>
+            <value>Automatic withdawals</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_group_employer</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Automatic withdawals</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 20:48:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b2fd166f4fca8f801e6cb4fe0210c76b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:43:54</sys_updated_on>
+            <value>Automatic withdawals</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_communication</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Language barrier</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:29:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>78e93b6b4fce8f801e6cb4fe0210c735</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:29:56</sys_updated_on>
+            <value>benefit_administration_communication_language_barrier</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_delay</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Insufficient billing, eligibility information</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:31:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7a3a7f6b4fce8f801e6cb4fe0210c7ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:31:26</sys_updated_on>
+            <value>benefit_administration_delay_insufficient_billing_eligibility_information</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_health_care_reform</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Grandfathering issues</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:33:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>edaa33ab4fce8f801e6cb4fe0210c766</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:33:16</sys_updated_on>
+            <value>benefit_administration_health_care_reform_grandfathering_issues</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>sample_level2</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Four Level Sample, Level 3</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>0</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:43:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>67ec7beb4fce8f801e6cb4fe0210c719</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:43:53</sys_updated_on>
+            <value>sample_level2_level3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_group_employer</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Premium Dispute</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>1</sequence>
             <sys_created_by>john.daniel</sys_created_by>
-            <sys_created_on>2017-10-24 21:10:23</sys_created_on>
+            <sys_created_on>2017-11-01 20:48:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>0f46d1494f420b801e6cb4fe0210c71c</sys_id>
-            <sys_mod_count>5</sys_mod_count>
+            <sys_id>6c0ed26f4fca8f801e6cb4fe0210c714</sys_id>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-26 17:26:13</sys_updated_on>
-            <value>3 of 3, A2</value>
+            <sys_updated_on>2017-11-02 02:46:40</sys_updated_on>
+            <value>administrative_billing_group_employer_premium_dispute</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value>2 of 3, B</dependent_value>
+            <dependent_value>administrative_billing_individual</dependent_value>
             <element>level_3</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 of 3, B1</label>
+            <label>Premium Dispute</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 20:49:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>103ed26f4fca8f801e6cb4fe0210c77f</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:46:38</sys_updated_on>
+            <value>administrative_billing_individual_premium_dispute</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>appeal_processing_communication</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:20:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2bb73be74fce8f801e6cb4fe0210c787</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:20:33</sys_updated_on>
+            <value>appeal_processing_communication_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>appeal_processing_misroute</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:19:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9197b32b4fce8f801e6cb4fe0210c72f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:20:47</sys_updated_on>
+            <value>appeal_processing_misroute_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_communication</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unclear to Recipient</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:30:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0af9376b4fce8f801e6cb4fe0210c7b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:30:17</sys_updated_on>
+            <value>benefit_administration_communication_unclear_to_recipient</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_delay</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:31:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2b4abf6b4fce8f801e6cb4fe0210c7a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:31:45</sys_updated_on>
+            <value>benefit_administration_delay_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_health_care_reform</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>1</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:33:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58ba7f6b4fce8f801e6cb4fe0210c7b3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:33:27</sys_updated_on>
+            <value>benefit_administration_health_care_reform_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_group_employer</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Termination Non-Payment</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
             <sequence>2</sequence>
             <sys_created_by>john.daniel</sys_created_by>
-            <sys_created_on>2017-10-24 21:10:23</sys_created_on>
+            <sys_created_on>2017-11-01 20:48:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4346dd494f420b801e6cb4fe0210c743</sys_id>
-            <sys_mod_count>5</sys_mod_count>
+            <sys_id>460e166f4fca8f801e6cb4fe0210c770</sys_id>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-26 17:26:18</sys_updated_on>
-            <value>3 of 3, B1</value>
+            <sys_updated_on>2017-11-02 02:46:46</sys_updated_on>
+            <value>administrative_billing_group_employer_termination_non-payment</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value>2 of 4, A</dependent_value>
+            <dependent_value>administrative_billing_individual</dependent_value>
             <element>level_3</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 of 4, A1</label>
+            <label>Termination Non-Payment</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
-            <sequence>4</sequence>
+            <sequence>2</sequence>
             <sys_created_by>john.daniel</sys_created_by>
-            <sys_created_on>2017-10-26 15:51:35</sys_created_on>
+            <sys_created_on>2017-11-01 20:49:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>b480eee94f4a4b801e6cb4fe0210c7cd</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_id>1e3ed6eb4fca8f801e6cb4fe0210c77d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-26 17:26:37</sys_updated_on>
-            <value>3 of 4, A1</value>
+            <sys_updated_on>2017-11-02 02:46:43</sys_updated_on>
+            <value>administrative_billing_individual_termination_non-payment</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value>2 of 4, B</dependent_value>
+            <dependent_value>benefit_administration_communication</dependent_value>
             <element>level_3</element>
             <hint/>
             <inactive>false</inactive>
-            <label>3 of 4, B1</label>
+            <label>Other</label>
             <language>en</language>
             <name>x_opt_ecm_rca</name>
-            <sequence>4</sequence>
+            <sequence>2</sequence>
             <sys_created_by>john.daniel</sys_created_by>
-            <sys_created_on>2017-10-26 17:32:33</sys_created_on>
+            <sys_created_on>2017-11-02 03:30:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>b397bea94f8a4b801e6cb4fe0210c774</sys_id>
+            <sys_id>020a376b4fce8f801e6cb4fe0210c7b7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>john.daniel</sys_updated_by>
-            <sys_updated_on>2017-10-26 17:32:33</sys_updated_on>
-            <value>3 of 4, B1</value>
+            <sys_updated_on>2017-11-02 03:30:34</sys_updated_on>
+            <value>benefit_administration_communication_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>benefit_administration_delay</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Third Party Payor</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>2</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-02 03:32:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd6ab76b4fce8f801e6cb4fe0210c7e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 03:32:08</sys_updated_on>
+            <value>benefit_administration_delay_third_party_payor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_group_employer</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>3</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 20:48:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c61e166f4fca8f801e6cb4fe0210c7e8</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:46:52</sys_updated_on>
+            <value>administrative_billing_group_employer_other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>administrative_billing_individual</dependent_value>
+            <element>level_3</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_opt_ecm_rca</name>
+            <sequence>3</sequence>
+            <sys_created_by>john.daniel</sys_created_by>
+            <sys_created_on>2017-11-01 20:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>202eda2f4fca8f801e6cb4fe0210c7d2</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>john.daniel</sys_updated_by>
+            <sys_updated_on>2017-11-02 02:46:50</sys_updated_on>
+            <value>administrative_billing_individual_other</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>level_3</element>
