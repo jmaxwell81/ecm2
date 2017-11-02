@@ -2,7 +2,7 @@
 <record_update table="sys_rest_message_fn_headers">
     <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
         <name>actor</name>
-        <rest_message_function display_value="Member Search POST">c3bf0dee4f6d4f001e6cb4fe0210c7e7</rest_message_function>
+        <rest_message_function display_value="MemberSearch">c3bf0dee4f6d4f001e6cb4fe0210c7e7</rest_message_function>
         <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
         <sys_created_by>todd.fudala</sys_created_by>
         <sys_created_on>2017-10-09 22:08:03</sys_created_on>

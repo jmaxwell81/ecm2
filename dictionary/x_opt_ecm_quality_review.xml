@@ -58,7 +58,7 @@
         <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Documentation Root Cause" max_length="1024" name="documentation_root_cause" reference="x_opt_ecm_quality_review_root_cause" reference_qual="category_name=Documentation^EQ" reference_qual_condition="category_name=Documentation^EQ" type="glide_list"/>
         <element label="Initial QR Due Date" max_length="40" name="initial_qp_due_date" type="glide_date_time"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Opened" max_length="40" name="opened_at" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
+        <element label="Opened" max_length="40" name="opened_at" read_only="true" type="glide_date_time"/>
         <element label="QR Comments" max_length="4000" name="qr_comments" type="journal_input"/>
         <element label="Review Completed By" max_length="32" name="review_completed_by" read_only="true" reference="sys_user" type="reference"/>
         <element label="Review Completed Date" max_length="40" name="review_completed_date" read_only="true" type="glide_date_time"/>
@@ -71,7 +71,7 @@
                 <element label="Complete" sequence="4" value="Complete"/>
             </choice>
         </element>
-        <element label="Revised QA Due Date" max_length="40" name="revised_qa_due_date" type="glide_date_time"/>
+        <element label="Revised QR Due Date" max_length="40" name="revised_qa_due_date" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="100" name="short_description" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Timely Submission" max_length="40" name="timely_submission" type="string">
             <choice>
