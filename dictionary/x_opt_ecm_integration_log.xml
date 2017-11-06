@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Integration Log" max_length="40" name="x_opt_ecm_integration_log" type="collection">
+        <element label="Error Code" max_length="40" name="error_code" type="string"/>
+        <element label="Error Message" max_length="200" name="error_message" type="string"/>
         <element label="Method" max_length="40" name="method" type="string"/>
         <element label="Request" max_length="4000" name="request" type="string"/>
         <element label="Response" max_length="4000" name="response" type="string"/>

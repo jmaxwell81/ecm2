@@ -5,13 +5,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>1e8010844f9acf801e6cb4fe0210c7fe</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d57807404f9203c01e6cb4fe0210c772</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>due_date</element>
             <position>1</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>168010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>5d7807404f9203c01e6cb4fe0210c772</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>member_first_name</element>
             <position>2</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>968010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>dd7807404f9203c01e6cb4fe0210c772</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>member_last_name</element>
             <position>3</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>1a8010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>517807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>member_mi</element>
             <position>4</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>9a8010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d17807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,13 +75,13 @@
             <element>oca_ocr_received_date</element>
             <position>5</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>1e8010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>557807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -89,13 +89,13 @@
             <element>resolved_at</element>
             <position>6</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>9e8010844f9acf801e6cb4fe0210c7ff</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d57807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -103,13 +103,13 @@
             <element>responsible_department</element>
             <position>7</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>128050844f9acf801e6cb4fe0210c700</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>597807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -117,13 +117,13 @@
             <element>state</element>
             <position>8</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>928050844f9acf801e6cb4fe0210c700</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d97807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -131,111 +131,97 @@
             <element>submission_source</element>
             <position>9</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>168050844f9acf801e6cb4fe0210c700</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>5d7807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>contact_account_id</element>
-            <position>10</position>
-            <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>968050844f9acf801e6cb4fe0210c700</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
-            <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>contact_carrier_id</element>
-            <position>11</position>
-            <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>1a8050844f9acf801e6cb4fe0210c700</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
-            <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>drug_name</element>
-            <position>12</position>
+            <position>10</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>9a8050844f9acf801e6cb4fe0210c700</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>dd7807404f9203c01e6cb4fe0210c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>intake_comments</element>
-            <position>13</position>
+            <position>11</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>1e8050844f9acf801e6cb4fe0210c700</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>517807404f9203c01e6cb4fe0210c774</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>member_account_id</element>
-            <position>14</position>
-            <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>9e8050844f9acf801e6cb4fe0210c700</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
-            <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>member_carrier_id</element>
-            <position>15</position>
-            <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>128050844f9acf801e6cb4fe0210c701</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
-            <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>member_id</element>
-            <position>16</position>
+            <position>12</position>
             <sys_created_by>mark.didrikson</sys_created_by>
-            <sys_created_on>2017-11-02 23:47:22</sys_created_on>
-            <sys_id>928050844f9acf801e6cb4fe0210c701</sys_id>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d17807404f9203c01e6cb4fe0210c774</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
             <sys_updated_by>mark.didrikson</sys_updated_by>
-            <sys_updated_on>2017-11-02 23:47:22</sys_updated_on>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>carrier_id</element>
+            <position>13</position>
+            <sys_created_by>mark.didrikson</sys_created_by>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>557807404f9203c01e6cb4fe0210c774</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
+            <sys_updated_by>mark.didrikson</sys_updated_by>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>account_id</element>
+            <position>14</position>
+            <sys_created_by>mark.didrikson</sys_created_by>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>d57807404f9203c01e6cb4fe0210c774</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
+            <sys_updated_by>mark.didrikson</sys_updated_by>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>group_id</element>
+            <position>15</position>
+            <sys_created_by>mark.didrikson</sys_created_by>
+            <sys_created_on>2017-11-03 13:10:56</sys_created_on>
+            <sys_id>597807404f9203c01e6cb4fe0210c774</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_opt_ecm_navigator_extract" sys_domain="global" view="Default view">de8010844f9acf801e6cb4fe0210c7f8</sys_ui_section>
+            <sys_updated_by>mark.didrikson</sys_updated_by>
+            <sys_updated_on>2017-11-03 13:10:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

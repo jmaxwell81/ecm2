@@ -21,15 +21,25 @@
         inputs.memberNumber = "123456789";
         inputs.effectiveDate = "20110519";
         inputs.city = "OKLAHOMA city";
-        inputs.state = "OK";*/
+        inputs.state = "OK";
+
+        - 50 Results
+                 "lastName": "SANIKOMMU",
+                 "firstName": "RAMULU",
+                 "dateOfBirth": "19801230",
+                 "gender": "M",
+                 "familyId": "RAMFAMILY",
+
+                 */
 
     for (var i in inputs) {
         inputs[i] = document.getElementById(i).value;
         console.log(inputs[i]);
+
     }
 
     this.loading(true);
-    this.memberSearch(inputs);
+    this.memberSearch(inputs, g_form.getValue('number'));
 
 
 }
@@ -38,7 +48,7 @@ function onCancel() {
     this.loading(false);
 }
 
-function memberSearch(input_values) {
+function memberSearch(input_values, case_number) {
 
     var ga = new GlideAjax('OptumRxAjax');
     ga.addParam('sysparm_name', 'memberSearch');
@@ -49,6 +59,7 @@ function memberSearch(input_values) {
     ga.addParam('sysparm_city', input_values.city);
     ga.addParam('sysparm_state', input_values.state);
     ga.addParam('sysparm_eff_date', input_values.effectiveDate);
+    ga.addParam('sysparm_case_number', case_number);
     ga.getXML(Parse);
 
 
@@ -57,12 +68,18 @@ function memberSearch(input_values) {
 function Parse(response) {
     var answer = response.responseXML.documentElement.getAttribute("answer");
     //alert(answer);
-    if (answer) {
+    if (answer !== null && answer !== undefined) {
         var data_obj = JSON.parse(answer);
-        bindTable(data_obj);
+        if (data_obj.response === null) {
+            alert("The response object was missing, the error is :" + data_obj.searchOutputMetaData.respCode);
+        } else {
+            bindTable(data_obj);
+        }
+
 
     } else {
         alert("The Ajax call failed, check the Integration Log for details.");
+        console.log();
 
     }
 
@@ -78,7 +95,11 @@ function bindTable(data_object) {
     var table = $j("#member_results").DataTable({
         "retrieve": true,
         "searching": false,
-        "paging": false,
+        "paging": true,
+        "pageLength": 5,
+        "lengthMenu": [5,10,25,50],
+        "pagingType": "first_last_numbers",
+        "dom": '<"top"i>rt<"bottom"flp><"clear">',
         //"scrollY": "200px",
         //"scrollCollapse": true,
         columns: [{
@@ -109,7 +130,7 @@ function bindTable(data_object) {
             title: "Member ID",
             data: "memberId"
         }, {
-            title: "Telephone",
+            title: "Phone",
             data: "phone"
         }]
 
@@ -141,6 +162,7 @@ function loading(is_loading) {
     <link rel="stylesheet" href="styles/heisenberg/source_sans_pro.css"></link>
     <link rel="stylesheet" type="text/css" href="styles/dev-studio.css"></link>
     <link rel="stylesheet" type="text/css" href="styles/cn-icons/cn-icons.css"></link>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></link>
 
     <div class="popup-body">
         <form name="search" class="form-horizontal">
@@ -216,7 +238,7 @@ function loading(is_loading) {
     </div>
     <div class="table-list">
         <div class="table-container">
-            <table id="member_results" class="table">
+            <table id="member_results" class=" table table-hover">
                 <thead></thead>
                 <tbody></tbody>
             </table>
@@ -232,7 +254,7 @@ function loading(is_loading) {
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>287</sys_mod_count>
+        <sys_mod_count>313</sys_mod_count>
         <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -240,6 +262,6 @@ function loading(is_loading) {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-11-02 20:39:38</sys_updated_on>
+        <sys_updated_on>2017-11-06 23:26:24</sys_updated_on>
     </sys_ui_page>
 </record_update>

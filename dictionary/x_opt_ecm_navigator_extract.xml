@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Navigator Extract" max_length="40" name="x_opt_ecm_navigator_extract" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Account ID" max_length="100" name="account_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Carrier ID" max_length="100" name="carrier_id" type="string"/>
         <element label="Contact Account ID" max_length="100" name="contact_account_id" type="string"/>
         <element label="Contact Carrier ID" max_length="100" name="contact_carrier_id" type="string"/>
         <element label="Drug Name" max_length="100" name="drug_name" type="string"/>
         <element label="Due date" max_length="100" name="due_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Group ID" max_length="100" name="group_id" type="string"/>
         <element label="Intake Comments" max_length="10000" name="intake_comments" type="string"/>
         <element label="Member Account ID" max_length="100" name="member_account_id" type="string"/>
         <element label="Member Carrier ID" max_length="100" name="member_carrier_id" type="string"/>
