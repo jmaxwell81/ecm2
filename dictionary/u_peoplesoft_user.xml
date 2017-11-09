@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="PeopleSoft - User" max_length="40" name="u_peoplesoft_user" sizeclass="90250" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="GRADE_LEVEL" max_length="40" name="u_grade_level" type="string"/>
+    </element>
+</database>

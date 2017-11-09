@@ -8,13 +8,12 @@
         <field>account</field>
         <global>true</global>
         <messages/>
-        <name>Field Validations</name>
+        <name>Field Validation - onLoad</name>
         <order/>
         <script><![CDATA[function onLoad() {
 
     var scope = 'x_opt_ecm_case';
 
-    console.log("Attaching Form Validators...");
     // Form fields to enforce
     var fields = [{
         name: "member_number",
@@ -30,6 +29,7 @@
         type: "alpha-numeric"
     }, {
         name: "member_ssn",
+        minLen: 9,
         maxLen: 9,
         type: "numeric"
     }, {
@@ -46,22 +46,25 @@
         type: "alpha-numeric"
     }, {
         name: "contact_ssn",
+        minLen: 9,
         maxLen: 9,
         type: "numeric"
     }, {
         name: "patient_ssn",
+        minLen: 9,
         maxLen: 9,
         type: "numeric"
     }];
 
     for (var f = 0; f < fields.length; f++) {
 
-        attachValidator(fields[f].name, fields[f].maxLen, fields[f].type);
+        attachValidator(fields[f].name, fields[f].minLen, fields[f].maxLen, fields[f].type);
     }
 
-    function attachValidator(field, maxLen, type) {
+    function attachValidator(field, minLen, maxLen, type) {
         $j('#' + scope + '\\.' + field).on('input', function() {
-            if (type == "numeric") {
+			
+			if (type == "numeric") {
                 var digitsOnly = $j(this).val().replace(/\D/g, '');
                 $j(this).val(digitsOnly);
             } else if (type == "alpha-numeric") {
@@ -69,17 +72,34 @@
                 $j(this).val(alphaNumOnly);
             }
 
-            if ($j(this).val().length > maxLen) {
-                g_form.hideFieldMsg(field, true);
-                g_form.showFieldMsg(field, 'Maximum (' + maxLen + ') ' + type + ' characters expected.', 'info');
-            }
+			var currentLength = $j(this).val().length;
+			
+			if (maxLen && (maxLen == minLen) && (currentLength != maxLen)) {
+				setMessage(field, 'Expects (' + maxLen + ') ' + type + ' characters.');
+				$j(this).val($j(this).val().slice(0, maxLen));
+			}
+			else if (maxLen && minLen && (maxLen != minLen) && (currentLength > maxLength || currentLength < minLength)) {
+				setMessage(field, 'Expects between (' + minLen + ') and (' + maxLen + ') ' + type + ' characters.');
+				$j(this).val($j(this).val().slice(0, maxLen));
+			}
+			else if (minLen && !maxLen && (currentLength < minLen)) {
+				setMessage(field, 'Minimum (' + minLen + ') ' + type + ' characters expected.');
+			}
 
-            $j(this).val($j(this).val().slice(0, maxLen));
+			else if (maxLen && !minLen && (currentLength > maxLen)) {
+				setMessage(field, 'Maximum (' + maxLen + ') ' + type + ' characters expected.');
+				$j(this).val($j(this).val().slice(0, maxLen));
+			}
+			else {
+				g_form.hideFieldMsg(field, true);
+			}
         });
     }
 
-
-
+	function setMessage(field, message) {
+		g_form.hideFieldMsg(field, true);
+		g_form.showFieldMsg(field, message, 'info');
+	}
 }
 ]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -89,16 +109,16 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>214f8c464fca8b801e6cb4fe0210c7ee</sys_id>
-        <sys_mod_count>78</sys_mod_count>
-        <sys_name>Field Validations</sys_name>
+        <sys_mod_count>81</sys_mod_count>
+        <sys_name>Field Validation - onLoad</sys_name>
         <sys_overrides/>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_client_214f8c464fca8b801e6cb4fe0210c7ee</sys_update_name>
-        <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-10-30 18:28:27</sys_updated_on>
+        <sys_updated_by>john.daniel</sys_updated_by>
+        <sys_updated_on>2017-11-09 05:17:51</sys_updated_on>
         <table>x_opt_ecm_case</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

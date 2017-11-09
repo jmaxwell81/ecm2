@@ -40,12 +40,16 @@ OptumRxIntegration.prototype = {
         var functName = "optumRxMemberSearch()";
         // Refresh the OAuth token
         var token = this.getOptumRxToken();
+        var rest_message = "x_opt_ecm.optumRxMemberSearch";
+        var rest_method = "MemberSearch";
+
         //gs.info(this.LOGHEADER, this.LOGSOURCE, functName, this.LOG_INFO, token);
 
         try {
             if (token) {
 
-                var r = new sn_ws.RESTMessageV2('x_opt_ecm.OptumRxMemberSearch', 'MemberSearch');
+                var r = new sn_ws.RESTMessageV2(rest_message, rest_method);
+                r.setEndpoint(gs.getProperty("x_opt_ecm.integration_orx_member_endpoint"));
                 r.setStringParameterNoEscape('token', token);
                 r.setStringParameterNoEscape('firstName', search_values.firstName);
                 r.setStringParameterNoEscape('lastName', search_values.lastName);
@@ -70,7 +74,7 @@ OptumRxIntegration.prototype = {
                 var httpStatus = response.getStatusCode();
                 var endpoint = r.getEndpoint();
                 var service_call_status = ""; //JSON.parse(responseBody).statusMessage[0];
-                var method = "OptumRxMemberSearch.MemberSearch";
+                var method = rest_message + "." + rest_method;
 
                 // #### ALWAYS log to the dedicated integration log table for tracking and debugging ####
                 this.logger.log(method, requestBody, responseBody, httpStatus, service_call_status, "", endpoint);
@@ -88,8 +92,59 @@ OptumRxIntegration.prototype = {
         }
     },
 
-    optumRxClaimSearch: function() {
+    optumRxClaimSearch: function(search_values) {
+        var functName = "optumRxClaimSearch()";
+        var rest_message = "x_opt_ecm.OptumRxClaimSearch";
+        var rest_method = "ClaimSearch";
+        // Refresh the OAuth token
+        var token = this.getOptumRxToken();
+        //gs.info(this.LOGHEADER, this.LOGSOURCE, functName, this.LOG_INFO, token);
 
+        try {
+            if (token) {
+
+                var r = new sn_ws.RESTMessageV2(rest_message, rest_method);
+                r.setEndpoint(gs.getProperty("x_opt_ecm.integration_orx_claims_endpoint"));
+                r.setStringParameterNoEscape('token', token);
+                r.setStringParameterNoEscape('externalCorrelationId', search_values.caseNumber);
+                r.setStringParameterNoEscape('memberId', search_values.memberId);
+                r.setStringParameterNoEscape('carrierId', search_values.carrierId);
+                r.setStringParameterNoEscape('accountId', search_values.accountId);
+                r.setStringParameterNoEscape('groupId', search_values.groupId);
+                r.setStringParameterNoEscape('memberKey', search_values.memberKey);
+                r.setStringParameterNoEscape('rXClaimInstanceId', search_values.rXClaimInstanceId);
+                r.setStringParameterNoEscape('fillDateFrom', search_values.fillDateFrom);
+                r.setStringParameterNoEscape('fillDateThru', search_values.fillDateThru);
+
+                // Fixed Values
+                r.setStringParameterNoEscape('consumerType', 'CA'); //Member or Customer Account
+                r.setStringParameterNoEscape('PBMUserID', 'UMR_USER');
+                r.setStringParameterNoEscape('consumerAppId', 'UMR');
+                r.setStringParameterNoEscape('consumerAppType', 'IA');
+
+                // ### CALL THE SERVICE ### //
+                var response = r.execute();
+                var responseBody = response.getBody();
+                var requestBody = r.getRequestBody();
+                var httpStatus = response.getStatusCode();
+                var endpoint = r.getEndpoint();
+                var service_call_status = ""; //JSON.parse(responseBody).statusMessage[0];
+                var method = rest_message + "." + rest_method;
+
+                // #### ALWAYS log to the dedicated integration log table for tracking and debugging ####
+                this.logger.log(method, requestBody, responseBody, httpStatus, service_call_status, "", endpoint);
+                // ####
+                gs.info(this.LOGHEADER, this.LOGSOURCE, functName, this.LOG_INFO, responseBody);
+
+                return responseBody;
+
+            } else {
+                throw new Error("The call failed requesting a valid OAuth Token, see Integration Log for details.");
+            }
+        } catch (e) {
+
+            gs.error(this.LOGHEADER, this.LOGSOURCE, functName, this.LOG_ERROR, e);
+        }
     },
     /** V E R A C I T Y ~ www.meetveracity.com ~ **
  		* Author: Todd Fudala ~ tfudala@meetveracity.com
@@ -141,7 +196,7 @@ OptumRxIntegration.prototype = {
         <sys_created_on>2017-10-19 15:34:36</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8769d2534ff94b00699aacb14210c79c</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>OptumRxIntegration</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy>read</sys_policy>
@@ -149,6 +204,6 @@ OptumRxIntegration.prototype = {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_script_include_8769d2534ff94b00699aacb14210c79c</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-11-06 19:41:12</sys_updated_on>
+        <sys_updated_on>2017-11-09 23:21:05</sys_updated_on>
     </sys_script_include>
 </record_update>

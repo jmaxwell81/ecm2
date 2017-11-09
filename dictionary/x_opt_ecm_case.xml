@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="293" type="collection">
+    <element attributes="live_feed=true,email_client=true" audit="true" extends="sn_customerservice_case" label="ECM Case" max_length="40" name="x_opt_ecm_case" sizeclass="305" type="collection">
         <element label="Ack Call Completed Date" max_length="40" name="ack_call_completed_date" type="glide_date"/>
         <element choice="1" label="Ack Call Required" max_length="40" name="ack_call_required" type="choice">
             <choice>
@@ -74,7 +74,7 @@
                 <element label="Third Party Claimant (Another Ins. Carrier)" sequence="13" value="third_party"/>
             </choice>
         </element>
-        <element label="Contact SSN" max_length="40" name="contact_ssn" type="string"/>
+        <element label="Contact SSN" max_length="9" name="contact_ssn" type="string"/>
         <element label="Contact State" max_length="40" name="contact_state" type="string"/>
         <element label="Date of Correspondence" max_length="40" name="correspondence_received_date" type="glide_date"/>
         <element choice="1" label="DOI Complaint" max_length="40" name="doi_complaint" type="choice">
@@ -177,7 +177,7 @@
         <element label="Member Phone" max_length="40" name="member_phone" type="string"/>
         <element label="Member Policy Number" max_length="20" name="member_policy_number" type="string"/>
         <element label="Member Postal Code" max_length="40" name="member_postal_code" type="string"/>
-        <element label="Member SSN" max_length="40" name="member_ssn" type="string"/>
+        <element label="Member SSN" max_length="9" name="member_ssn" type="string"/>
         <element label="Member State" max_length="40" name="member_state" type="string"/>
         <element choice="1" label="Modification Reason" max_length="40" name="modification_reason" type="choice">
             <choice>
@@ -224,7 +224,7 @@
                 <element label="Surviving Spouse" value="surviving_spouse"/>
             </choice>
         </element>
-        <element label="Patient SSN" max_length="40" name="patient_ssn" type="string"/>
+        <element label="Patient SSN" max_length="9" name="patient_ssn" type="string"/>
         <element label="Patient State" max_length="40" name="patient_state" type="string"/>
         <element choice="1" label="Platform" max_length="40" name="platform" type="choice">
             <choice>

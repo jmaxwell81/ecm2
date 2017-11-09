@@ -2,9 +2,35 @@
 <record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[function onSearch() {
+        <client_script><![CDATA[/** V E R A C I T Y ~ www.meetveracity.com ~ **
+ * Author: Todd Fudala ~ tfudala@meetveracity.com
+
+ * Description: Functions to manage OptumRx integrations for the ECM application
+
+ */
 
 
+
+
+
+
+$j(".form-control").on("keyup", function() {
+    if ($j(this).val() != '') {
+        $j('#search').removeClass('disabled');
+    }
+});
+
+function displayMessage(message) {
+    $j("#display_message").text(message);
+    console.log(message);
+}
+
+
+function onMemberSearch() {
+    $j('#claim_results_container').hide(); // Hide the claims results container
+    $j('#search_results_container').show(); // Show the member results container
+    displayMessage("Searching...");
+    // Member Search Inputs based on REST Message
     var inputs = {
         "firstName": "",
         "lastName": "",
@@ -14,23 +40,7 @@
         "city": "",
         "state": ""
     };
-    // TEST DATA
-    /*    inputs.firstName = "WALTER";
-        inputs.lastName = "TEST";
-        inputs.dateOfBirth = "19090713";
-        inputs.memberNumber = "123456789";
-        inputs.effectiveDate = "20110519";
-        inputs.city = "OKLAHOMA city";
-        inputs.state = "OK";
 
-        - 50 Results
-                 "lastName": "SANIKOMMU",
-                 "firstName": "RAMULU",
-                 "dateOfBirth": "19801230",
-                 "gender": "M",
-                 "familyId": "RAMFAMILY",
-
-                 */
 
     for (var i in inputs) {
         inputs[i] = document.getElementById(i).value;
@@ -38,14 +48,36 @@
 
     }
 
-    this.loading(true);
-    this.memberSearch(inputs, g_form.getValue('number'));
+    loading(true);
+    memberSearch(inputs, g_form.getValue('number'));
 
 
 }
 
+function onClaimSearch() {
+
+    $j('#search_results_container').hide(); // Hide the member results container
+    $j('#claim_results_container').show(); // Show the claims results container
+
+    // Claim Search Inputs based on REST Message
+    var inputs = {
+        "carrierId": "PROACT1",
+        "accountId": "ABB",
+        "groupId": "8285A01",
+        "memberId": "TESTMEM22333322333",
+        "memberKey": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZW1iZXJTZWFyY2hLZXkiLCJNZW1iZXJJRCI6IlRFU1RNRU0yMjMzMzMyMjMzMyIsIkNhcnJpZXJJRCI6IlBST0FDVDEgICIsIkFjY291bnRJRCI6IkFCQiAgICAgICAgICAgICIsIkdyb3VwSWQiOiI4Mjg1QTAxICAgICAgICAiLCJSeENsYWltSW5zdGFuY2VJZCI6IiIsIkNvbnN1bWVBcHBJZCI6IlByb0FjdCIsIkdyb3VwTGlzdCI6IlBST0FDVCIsIlRpbWVzdGFtcCI6MTQ5OTc1NjIwOTM1OX0.8sqfJlU6idZkvdbmCNEngS5-MOrsDueg8unKpXGr-Pk",
+        "rXClaimInstanceId": "BOOK1",
+        "fillDateFrom": "20170601",
+        "fillDateThru": "20171030"
+    };
+
+    loading(true);
+    claimSearch(inputs, g_form.getValue('number'));
+
+}
+
 function onCancel() {
-    this.loading(false);
+    loading(false);
 }
 
 function memberSearch(input_values, case_number) {
@@ -60,20 +92,60 @@ function memberSearch(input_values, case_number) {
     ga.addParam('sysparm_state', input_values.state);
     ga.addParam('sysparm_eff_date', input_values.effectiveDate);
     ga.addParam('sysparm_case_number', case_number);
-    ga.getXML(Parse);
+    ga.getXML(parseMemberSearch);
 
 
 }
 
-function Parse(response) {
+function claimSearch(input_values, case_number) {
+
+    var ga = new GlideAjax('OptumRxAjax');
+    ga.addParam('sysparm_name', 'claimSearch');
+    ga.addParam('sysparm_carrier_id', input_values.carrierId);
+    ga.addParam('sysparm_account_id', input_values.accountId);
+    ga.addParam('sysparm_group_id', input_values.groupId);
+    ga.addParam('sysparm_member_id', input_values.memberId);
+    ga.addParam('sysparm_member_key', input_values.memberKey);
+    ga.addParam('sysparm_claim_instance_id', input_values.rXClaimInstanceId);
+    ga.addParam('sysparm_fill_date_from', input_values.fillDateFrom);
+    ga.addParam('sysparm_fill_date_to', input_values.fillDateThru);
+    ga.addParam('sysparm_case_number', case_number);
+    ga.getXML(parseClaimSearch);
+
+
+}
+
+function parseMemberSearch(response) {
     var answer = response.responseXML.documentElement.getAttribute("answer");
     //alert(answer);
     if (answer !== null && answer !== undefined) {
         var data_obj = JSON.parse(answer);
-        if (data_obj.response === null) {
+        if (data_obj.searchOutputMetaData.respCode === "200") {
+            bindMemberTable(data_obj);
+        }
+        displayMessage(data_obj.searchOutputMetaData.respMessage[0]);
+
+
+
+    } else {
+        displayMessage("The Ajax call failed, check the Integration Log for details.");
+        console.log();
+
+    }
+
+    loading(false);
+
+}
+
+function parseClaimSearch(response) {
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+    //alert(answer);
+    if (answer !== null && answer !== undefined) {
+        var data_obj = JSON.parse(answer);
+        if (data_obj.claimSearchResponse === null) {
             alert("The response object was missing, the error is :" + data_obj.searchOutputMetaData.respCode);
         } else {
-            bindTable(data_obj);
+            bindClaimTable(data_obj);
         }
 
 
@@ -87,21 +159,16 @@ function Parse(response) {
 
 }
 
-
-
-function bindTable(data_object) {
-
+function bindMemberTable(data_object) {
     var bindData = data_object.response.memberSearchItems;
-    var table = $j("#member_results").DataTable({
+    var table = $j("#search_results").DataTable({
         "retrieve": true,
         "searching": false,
         "paging": true,
         "pageLength": 5,
-        "lengthMenu": [5,10,25,50],
+        "lengthMenu": [5, 10, 25, 50],
         "pagingType": "first_last_numbers",
         "dom": '<"top"i>rt<"bottom"flp><"clear">',
-        //"scrollY": "200px",
-        //"scrollCollapse": true,
         columns: [{
             title: "First Name",
             data: "firstName"
@@ -111,12 +178,6 @@ function bindTable(data_object) {
         }, {
             title: "DOB",
             data: "dateOfBirth"
-        }, {
-            title: "Eff Date From",
-            data: "memberEffectiveDate.fromDate"
-        }, {
-            title: "Eff Date Thru",
-            data: "memberEffectiveDate.thruDate"
         }, {
             title: "Carrier ID",
             data: "carrierId"
@@ -140,15 +201,178 @@ function bindTable(data_object) {
 
 }
 
+function bindClaimTable(data_object) {
+    var bindData = data_object.claimSearchResponse.claimSearchV2ServiceItem;
+    // Array holding selected row IDs
+    var rows_selected = [];
 
+    var table = $j("#claim_results").DataTable({
+        "retrieve": true,
+        "searching": false,
+        "paging": true,
+        "pageLength": 5,
+        "lengthMenu": [5, 10, 25, 50],
+        "pagingType": "first_last_numbers",
+        "dom": '<"top"i>rt<"bottom"flp><"clear">',
+        'columnDefs': [{
+            'targets': 0,
+            'searchable': false,
+            'orderable': false,
+            'width': '1%',
+            'className': 'dt-body-center',
+            'render': function(data, type, full, meta) {
+                return '<input type="checkbox">';
+            }
+        }],
+        "columns": [{
+                title: '<input name="select_all" value="1" type="checkbox">',
+            },
+            {
+                title: "Member ID",
+                data: "memberId"
+            },
+            {
+                title: "Fill Date",
+                data: "fillDate"
+            },
+            {
+                title: "Product ID",
+                data: "productId"
+            },
+            {
+                title: "RX Number",
+                data: "rxNumber"
+            },
+            {
+                title: "Product",
+                data: "productNameAbbreviation"
+            },
+            {
+                title: "Supply",
+                data: "daysSupply"
+            },
+            {
+                title: "Status",
+                data: "claimStatus"
+            },
+            {
+                title: "Patient Amt.",
+                data: "patientPayAmount"
+            }
+        ],
+        'order': [1, 'asc'],
+        'rowCallback': function(row, data, dataIndex) {
+            // Get row ID
+            var rowId = data[0];
 
+            // If row ID is in the list of selected row IDs
+            if ($j.inArray(rowId, rows_selected) !== -1) {
+                $j(row).find('input[type="checkbox"]').prop('checked', true);
+                $j(row).addClass('selected');
+            }
+        }
 
+    });
+
+    // Handle click on checkbox
+    $j('#claim_results').on('click', 'input[type="checkbox"]', function(e) {
+        var $row = $j(this).closest('tr');
+
+        // Get row data
+        var data = table.row($row).data();
+
+        // Get row ID
+        var rowId = data[0];
+
+        // Determine whether row ID is in the list of selected row IDs
+        var index = $j.inArray(rowId, rows_selected);
+
+        // If checkbox is checked and row ID is not in list of selected row IDs
+        if (this.checked && index === -1) {
+            rows_selected.push(rowId);
+
+            // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+        } else if (!this.checked && index !== -1) {
+            rows_selected.splice(index, 1);
+        }
+
+        if (this.checked) {
+            $row.addClass('selected');
+        } else {
+            $row.removeClass('selected');
+        }
+
+        // Update state of "Select all" control
+        updateDataTableSelectAllCtrl(table);
+
+        // Prevent click event from propagating to parent
+        e.stopPropagation();
+    });
+
+    // Handle click on table cells with checkboxes
+    $j('#claim_results').on('click', 'tbody td, thead th:first-child', function(e) {
+        $j(this).parent().find('input[type="checkbox"]').trigger('click');
+    });
+
+    // Handle click on "Select all" control
+    $j('thead input[name="select_all"]', table.table().container()).on('click', function(e) {
+        if (this.checked) {
+            $j('#claim_results input[type="checkbox"]:not(:checked)').trigger('click');
+        } else {
+            $j('#claim_results input[type="checkbox"]:checked').trigger('click');
+        }
+
+        // Prevent click event from propagating to parent
+        e.stopPropagation();
+    });
+
+    // Handle table draw event
+    table.on('draw', function() {
+        // Update state of "Select all" control
+        updateDataTableSelectAllCtrl(table);
+    });
+
+    table.clear().draw().rows.add(bindData).draw();
+
+}
 
 function loading(is_loading) {
     var loader = document.getElementById("loading");
     var loading_state = (is_loading) ? "text-center" : "text-center hidden";
     loader.className = loading_state;
 
+}
+
+//
+// Updates "Select all" control in a data table
+//
+function updateDataTableSelectAllCtrl(table) {
+    var $table = table.table().node();
+    var $chkbox_all = $j('tbody input[type="checkbox"]', $table);
+    var $chkbox_checked = $j('tbody input[type="checkbox"]:checked', $table);
+    var chkbox_select_all = $j('thead input[name="select_all"]', $table).get(0);
+
+    // If none of the checkboxes are checked
+    if ($chkbox_checked.length === 0) {
+        chkbox_select_all.checked = false;
+        if ('indeterminate' in chkbox_select_all) {
+            chkbox_select_all.indeterminate = false;
+        }
+
+        // If all of the checkboxes are checked
+    } else if ($chkbox_checked.length === $chkbox_all.length) {
+        chkbox_select_all.checked = true;
+        if ('indeterminate' in chkbox_select_all) {
+            chkbox_select_all.indeterminate = false;
+        }
+
+        // If some of the checkboxes are checked
+    } else {
+        chkbox_select_all.checked = true;
+        if ('indeterminate' in chkbox_select_all) {
+            chkbox_select_all.indeterminate = true;
+        }
+    }
 }
 ]]></client_script>
         <description>OptumRx Search</description>
@@ -226,19 +450,30 @@ function loading(is_loading) {
 
     <footer class="modal-footer">
         <a class="btn btn-default" onclick="onCancel()">Cancel</a>
-        <button id="search" type="submit" class="btn btn-primary" onclick="onSearch()">Search OptumRx</button>
+        <button id="search" type="submit" class="btn btn-primary disabled" onclick="onMemberSearch()">Search Members</button>
+        <button id="search_claim" type="submit" class="btn btn-primary" onclick="onClaimSearch()">Search Claims</button>
     </footer>
 
     <hr></hr>
-
+    <div><h4 id="display_message"></h4></div>
 
     <div id="loading" class="text-center hidden">
-        <h3>Loading...</h3>
+        <h4>Loading...</h4>
         <div class="loading-indicator icon-loading icon-lg"></div>
     </div>
-    <div class="table-list">
+
+    <div id="search_results_container" class="table-list">
         <div class="table-container">
-            <table id="member_results" class=" table table-hover">
+            <table id="search_results" class="table">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="claim_results_container" class="table-list">
+        <div class="table-container">
+            <table id="claim_results" class="table">
                 <thead></thead>
                 <tbody></tbody>
             </table>
@@ -254,7 +489,7 @@ function loading(is_loading) {
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>313</sys_mod_count>
+        <sys_mod_count>417</sys_mod_count>
         <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -262,6 +497,6 @@ function loading(is_loading) {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-11-06 23:26:24</sys_updated_on>
+        <sys_updated_on>2017-11-09 23:25:52</sys_updated_on>
     </sys_ui_page>
 </record_update>

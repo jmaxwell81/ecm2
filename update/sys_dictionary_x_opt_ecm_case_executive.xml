@@ -44,8 +44,7 @@
         <reference_floats>false</reference_floats>
         <reference_key/>
         <reference_qual>u_job_grade=ELT^EQ</reference_qual>
-        <reference_qual_condition table="sys_user">u_job_grade=ELT^EQ<item endquery="false" field="u_job_grade" goto="false" newquery="false" operator="=" or="false" value="ELT"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <reference_qual_condition table="sys_user">u_job_grade=ELT^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </reference_qual_condition>
         <reference_type/>
         <sizeclass/>
