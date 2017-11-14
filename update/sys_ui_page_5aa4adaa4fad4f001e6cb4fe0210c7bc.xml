@@ -17,8 +17,15 @@ $j(".form-control").on("keyup", function() {
     }
 });
 
+setDefaults();
 
-$j("#effectiveDate").val(formatISODate());
+// Set form value defaults
+function setDefaults() {
+    // Default effective date to today in the OptumRx ISO format
+    var d = moment().format("YYYYMMDD");
+    $j("#effectiveDate").val(d);
+}
+
 
 
 // Display messages for the user
@@ -27,17 +34,37 @@ function displayMessage(message) {
     console.log(message);
 }
 
+function onClear() {
+    clearActiveTable();
+}
+
+function clearActiveTable() {
+    var table = $j('.table-list:visible table').DataTable();
+    var rows = table.clear().draw();
+    $j('#clear').addClass('disabled');
+}
+
+function onCopy() {
+    var table = $j('#claim_results').DataTable();
+    var rows = table.rows('.selected');
+    var row = rows.data()[0];
+    console.log(row);
+    displayMessage(rows.count() + " record(s) selected to copy.");
+    postClaim();
+}
 
 function onMemberSearch() {
     $j('#claim_results_container').hide(); // Hide the claims results container
     $j('#search_results_container').show(); // Show the member results container
-    displayMessage("Searching...");
+
+
+    displayMessage("Searching for member...");
     // Member Search Inputs based on REST Message
     var inputs = {
         "firstName": "",
         "lastName": "",
         "dateOfBirth": "",
-        "memberNumber": "",
+        "memberId": "",
         "effectiveDate": "",
         "city": "",
         "state": ""
@@ -63,18 +90,18 @@ function onClaimSearch(member_data) {
 
     $j('#search_results_container').hide(); // Hide the member results container
     $j('#claim_results_container').show(); // Show the claims results container
-
+    displayMessage("Searching for claims...");
     // Claim Search Inputs based on REST Message
     var inputs = {
-        "carrierId": member_data.carrierId, //"PROACT1",
-        "accountId": member_data.accountId, //"ABB",
-        "groupId": member_data.groupId, //"8285A01",
-        "memberId": member_data.memberId, //"TESTMEM22333322333",
-        "memberKey": member_data.memberKey, //"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZW1iZXJTZWFyY2hLZXkiLCJNZW1iZXJJRCI6IlRFU1RNRU0yMjMzMzMyMjMzMyIsIkNhcnJpZXJJRCI6IlBST0FDVDEgICIsIkFjY291bnRJRCI6IkFCQiAgICAgICAgICAgICIsIkdyb3VwSWQiOiI4Mjg1QTAxICAgICAgICAiLCJSeENsYWltSW5zdGFuY2VJZCI6IiIsIkNvbnN1bWVBcHBJZCI6IlByb0FjdCIsIkdyb3VwTGlzdCI6IlBST0FDVCIsIlRpbWVzdGFtcCI6MTQ5OTc1NjIwOTM1OX0.8sqfJlU6idZkvdbmCNEngS5-MOrsDueg8unKpXGr-Pk",
-        "rXClaimInstanceId": member_data.instanceId, //"BOOK1",
-        "fillDateFrom": formatISODate(new Date()), //"20170601",
-        "fillDateThru": member_data.memberEffectiveDate.thruDate //"20171030"
-    };
+        "carrierId": member_data.carrierId,
+        "accountId": member_data.accountId,
+        "groupId": member_data.groupId,
+        "memberId": member_data.memberId,
+        "memberKey": member_data.memberKey,
+        "rXClaimInstanceId": "SXCD1-QA", //member_data.instanceId,
+        "fillDateFrom": moment().subtract(180, "days").format("YYYYMMDD"), // 180 days back
+        "fillDateThru": moment().format("YYYYMMDD") // Today
+    }
 
     loading(true);
     claimSearch(inputs, g_form.getValue('number'), g_form.getUniqueValue());
@@ -92,7 +119,7 @@ function memberSearch(input_values, case_number, sys_id) {
     ga.addParam('sysparm_first_name', input_values.firstName);
     ga.addParam('sysparm_last_name', input_values.lastName);
     ga.addParam('sysparm_dob', input_values.dateOfBirth);
-    ga.addParam('sysparm_member_id', input_values.memberNumber);
+    ga.addParam('sysparm_member_id', input_values.memberId);
     ga.addParam('sysparm_city', input_values.city);
     ga.addParam('sysparm_state', input_values.state);
     ga.addParam('sysparm_eff_date', input_values.effectiveDate);
@@ -118,7 +145,7 @@ function claimSearch(input_values, case_number, sys_id) {
     ga.addParam('sysparm_case_number', case_number);
     ga.addParam('sysparm_sys_id', sys_id);
     ga.getXML(parseClaimSearch);
-
+    //getJSON
 
 }
 
@@ -163,7 +190,7 @@ function parseClaimSearch(response) {
 
 
     } else {
-        alert("The Ajax call failed, check the Integration Log for details.");
+        displayMessage("The Ajax call failed, check the Integration Log for details.");
         console.log();
 
     }
@@ -238,7 +265,10 @@ function bindMemberTable(data_object) {
 
     table.clear().draw().rows.add(bindData).draw();
 
+    // Allow table to be cleared
+    $j('#clear').removeClass('disabled');
 
+    displayMessage("Member results:");
 
 
 }
@@ -316,6 +346,10 @@ function bindClaimTable(data_object) {
 
     });
 
+
+
+    /* ---------------------Start Checkbox Handling------------------------------*/
+
     // Handle click on checkbox
     $j('#claim_results').on('click', 'input[type="checkbox"]', function(e) {
         var $row = $j(this).closest('tr');
@@ -349,6 +383,8 @@ function bindClaimTable(data_object) {
 
         // Prevent click event from propagating to parent
         e.stopPropagation();
+
+
     });
 
     // Handle click on table cells with checkboxes
@@ -376,12 +412,7 @@ function bindClaimTable(data_object) {
 
     table.clear().draw().rows.add(bindData).draw();
 
-}
-
-function loading(is_loading) {
-    var loader = document.getElementById("loading");
-    var loading_state = (is_loading) ? "text-center" : "text-center hidden";
-    loader.className = loading_state;
+    displayMessage("Claims results:");
 
 }
 
@@ -394,12 +425,14 @@ function updateDataTableSelectAllCtrl(table) {
     var $chkbox_checked = $j('tbody input[type="checkbox"]:checked', $table);
     var chkbox_select_all = $j('thead input[name="select_all"]', $table).get(0);
 
+
     // If none of the checkboxes are checked
     if ($chkbox_checked.length === 0) {
         chkbox_select_all.checked = false;
         if ('indeterminate' in chkbox_select_all) {
             chkbox_select_all.indeterminate = false;
         }
+        enableCopy(false);
 
         // If all of the checkboxes are checked
     } else if ($chkbox_checked.length === $chkbox_all.length) {
@@ -407,6 +440,7 @@ function updateDataTableSelectAllCtrl(table) {
         if ('indeterminate' in chkbox_select_all) {
             chkbox_select_all.indeterminate = false;
         }
+        enableCopy(true);
 
         // If some of the checkboxes are checked
     } else {
@@ -414,8 +448,11 @@ function updateDataTableSelectAllCtrl(table) {
         if ('indeterminate' in chkbox_select_all) {
             chkbox_select_all.indeterminate = true;
         }
+        enableCopy(true);
     }
 }
+
+/* ---------------------End Checkbox Handling------------------------------*/
 
 function formatISODate() {
     var d = new Date();
@@ -423,13 +460,41 @@ function formatISODate() {
     return d.toISOString().replace(/-/g, "").slice(0, 8);
 }
 
-//TODO:
-function addDays(iso_date, numberOfDays) {
-    var d = new Date();
-    var result;
-    d = iso_date;
-    result = d.setDate(d.getDate() + numberOfDays);
-    return result;
+function loading(is_loading) {
+    var loader = document.getElementById("loading");
+    var loading_state = (is_loading) ? "text-center" : "text-center hidden";
+    loader.className = loading_state;
+}
+
+function enableCopy(boolean_value) {
+    if (boolean_value) {
+        $j('#copy').removeClass('disabled');
+    } else {
+        $j('#copy').addClass('disabled');
+    }
+}
+
+function postClaim() {
+
+    var requestBody = "{\"carrier_id\":\"PROACT1\",\"account_id\":\"ABB\",\"member_id\":\"TESTMEM22333322333\",\"group_id\":\"8285A01\",\"claim_number\":\"171981435681000\",\"claim_status\":\"P\",\"fill_date\":\"20170717\",\"generic_product_id\":\"\",\"patient_pay_amount\":\"0.00\",\"plan_pay_amount\":\"2.09\",\"product_id\":\"31604002840\",\"product_name\":\"FISH OIL    CAP 183.33MG\",\"reject_code\":\"50\",\"reject_message\":\"Pharmacy not authorized to dispense\",\"parent\":\"4365c93f4fd60300699aacb14210c72a\"}";
+
+    var client = new XMLHttpRequest();
+    client.open("post", "https://optumbusopsdev.service-now.com/api/now/table/x_opt_ecm_claims?sysparm_fields=sys_id%2Csys_created_on");
+
+    client.setRequestHeader('Accept', 'application/json');
+    client.setRequestHeader('Content-Type', 'application/json');
+
+    //Eg. UserName="admin", Password="admin" for this code sample.
+    client.setRequestHeader('Authorization', 'Basic ' + window.btoa('admin' + ':' + 'admin'));
+
+    client.onreadystatechange = function() {
+        if (this.readyState == this.DONE) {
+            //document.getElementById("response").innerHTML = this.status + this.response;
+            displayMessage("REST POST sent successfully.");
+        }
+    };
+    client.send(requestBody);
+
 }
 ]]></client_script>
         <description>OptumRx Search</description>
@@ -439,6 +504,7 @@ function addDays(iso_date, numberOfDays) {
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 
     <script src="x_opt_ecm.DataTables.1.10.16.jsdbx"></script>
+    <script src="x_opt_ecm.moment.js.jsdbx"></script>
     <link rel="stylesheet" href="styles/heisenberg/heisenberg_all.css"></link>
     <link rel="stylesheet" href="styles/heisenberg/source_sans_pro.css"></link>
     <link rel="stylesheet" type="text/css" href="styles/dev-studio.css"></link>
@@ -469,7 +535,7 @@ function addDays(iso_date, numberOfDays) {
                             </div>
                             <label class="col-sm-2 control-label">Member ID</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" id="memberNumber" placeholder="9 or 12 characters"></input>
+                                <input type="text" class="form-control" id="memberId" placeholder="9 or 12 characters"></input>
                             </div>
                         </div>
 
@@ -507,21 +573,24 @@ function addDays(iso_date, numberOfDays) {
 
     <footer class="modal-footer">
         <a class="btn btn-default" onclick="onCancel()">Cancel</a>
-        <button id="search" type="submit" class="btn btn-primary disabled" onclick="onMemberSearch()">Search Members</button>
-        <!--<button id="search_claim" type="submit" class="btn btn-primary disabled" onclick="onClaimSearch()">Search Claims</button>-->
+        <button id="search" type="submit" class="btn btn-primary disabled" onclick="onMemberSearch()">Search</button>
+        <button id="clear" type="submit" class="btn btn-primary disabled" onclick="onClear()">Clear</button>
+        <button id="copy" type="submit" class="btn btn-success disabled" onclick="onCopy()">Copy</button>
     </footer>
 
     <hr></hr>
-    <div><h4 id="display_message"></h4></div>
+    <div>
+        <h4 id="display_message"></h4>
+    </div>
 
     <div id="loading" class="text-center hidden">
         <h4>Loading...</h4>
-        <div class="loading-indicator icon-loading icon-lg"></div>
+        <div class="loading-indicator icon-loading"></div>
     </div>
 
     <div id="search_results_container" class="table-list">
         <div class="table-container">
-            <table id="search_results" class="table">
+            <table id="search_results" class="table hover" style="cursor:pointer">
                 <thead></thead>
                 <tbody></tbody>
             </table>
@@ -530,7 +599,7 @@ function addDays(iso_date, numberOfDays) {
 
     <div id="claim_results_container" class="table-list">
         <div class="table-container">
-            <table id="claim_results" class="table">
+            <table id="claim_results" class="table hover" style="cursor:pointer">
                 <thead></thead>
                 <tbody></tbody>
             </table>
@@ -546,7 +615,7 @@ function addDays(iso_date, numberOfDays) {
         <sys_created_on>2017-10-04 17:39:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_id>
-        <sys_mod_count>484</sys_mod_count>
+        <sys_mod_count>541</sys_mod_count>
         <sys_name>orx_search</sys_name>
         <sys_package display_value="Escalated Complaint Management" source="x_opt_ecm">d1cfc3484f680b001e6cb4fe0210c7b7</sys_package>
         <sys_policy/>
@@ -554,6 +623,6 @@ function addDays(iso_date, numberOfDays) {
         <sys_scope display_value="Escalated Complaint Management">d1cfc3484f680b001e6cb4fe0210c7b7</sys_scope>
         <sys_update_name>sys_ui_page_5aa4adaa4fad4f001e6cb4fe0210c7bc</sys_update_name>
         <sys_updated_by>todd.fudala</sys_updated_by>
-        <sys_updated_on>2017-11-13 23:46:42</sys_updated_on>
+        <sys_updated_on>2017-11-14 23:29:10</sys_updated_on>
     </sys_ui_page>
 </record_update>
